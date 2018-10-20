@@ -21,6 +21,17 @@ client.on('message', message => {
 			'description': description
 			}});
 	}
+	if(message.content.startsWith(`${prefix}parabola`)) {
+		message.delete();
+		const args = message.content.slice('.').trim().split(/ +/g);
+        const command = args.shift().toLowerCase();
+		var a = args[0]*1;
+		var b = args[1]*1;
+		var c = args[2]*1;
+		var x = -b/(2*a);
+		var y = a*x**2+b*x+c;
+		message.channel.send('('+x+';'+y+')');
+	}
 });
 
 client.login(process.env.TOKEN);
