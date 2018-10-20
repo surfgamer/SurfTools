@@ -11,7 +11,7 @@ client.on('message', message => {
 	if(message.content.startsWith(`${prefix}embed`)) {
 		message.delete();
 		const args = message.content.slice('.').trim().split(/ +/g);
-        const command = args.shift().toLowerCase();
+		const command = args.shift().toLowerCase();
 		var title = args[0];
 		var color = args[1];
 		var description = args[2];
