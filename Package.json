@@ -1,9 +1,13 @@
 {
-  "engines": {
-    "node": "10.9.0",
-    "npm": "6.2.0"
+  "name": "SurfTools",
+  "description": "SurfTools",
+  "version": "1.0.0",
+  "main": "SurfTools.js",
+  "scripts": {
+    "start": "node SurfTools.js"
   },
   "dependencies": {
-    "discord.js": "11.4.2"
+    "discord.js": "11.1.0",
+    "request": "2.81.0"
   }
 }
