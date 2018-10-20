@@ -24,7 +24,7 @@ client.on('message', message => {
 	if(message.content.startsWith(`${prefix}parabola`)) {
 		message.delete();
 		const args = message.content.slice('.').trim().split(/ +/g);
-        const command = args.shift().toLowerCase();
+		const command = args.shift().toLowerCase();
 		var a = args[0]*1;
 		var b = args[1]*1;
 		var c = args[2]*1;
