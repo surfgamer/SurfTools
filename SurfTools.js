@@ -37,17 +37,17 @@ client.on('message', message => {
 		}});
 	}
 	if(message.content.startsWith(`${prefix}sparabola`)) {
-	message.delete();
-	const args = message.content.slice('.').trim().split(/ +/g);
-	const command = args.shift().toLowerCase();
-	var a = args[0]*1;
-	var b = args[1]*1;
-	var s = (b^(4)/4)-(a^(4)/4);
-	message.channel.send({embed: {
-		'title': 'int(x^3,x='+a+'..'+b+')',
-		'color': '16777011',
-		'description': s
-	}});
+		message.delete();
+		const args = message.content.slice('.').trim().split(/ +/g);
+		const command = args.shift().toLowerCase();
+		var a = args[0]*1;
+		var b = args[1]*1;
+		var s = (b**(4)/4)-(a**(4)/4);
+		message.channel.send({embed: {
+			'title': 'int(x**3,x='+a+'..'+b+')',
+			'color': '16777011',
+			'description': s
+		}});
 	}
 });
 
